@@ -2,24 +2,24 @@
 
 An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-**Current download: 0.8.2-alpha. Real-game compatibility is still being tested.** Choose the correct client ZIP; everyone testing together should use the same version.
+**Current download: 0.8.3-alpha. Real-game compatibility is still being tested.** Choose the correct client ZIP; everyone testing together should use the same version.
 
-- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.2-alpha/ForeverCircle-Forever.zip)
-- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.2-alpha/ForeverCircle-Classic-Hardcore.zip)
-- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.8.2-alpha)
+- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.3-alpha/ForeverCircle-Forever.zip)
+- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.3-alpha/ForeverCircle-Classic-Hardcore.zip)
+- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.8.3-alpha)
 
 [Quick-start infographic (0.8.1 guide; commands still apply)](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/FWLT-Quick-Start.png)
 
 Use the named ZIP, not GitHub's automatic Source code archive.
 
-**New in 0.8.2:** clearer selected rows and tabs, labelled search boxes, calmer grouped forms and windows that refit when the UI scale changes.
+**New in 0.8.3:** `/fwlt discord` explains optional native guild-chat setup. Craft-request forms and your own open activity posts offer **Copy for guild chat**: review an editable summary, then copy and send it yourself. The existing window/layout improvements remain.
 
 **New name, familiar data:** `/fwlt` is the primary command. `/fc` and `/forevercircle` still work in game. Keep the `ForeverCircle` install folder and saved file; updating uses your existing characters, recipes, orders and settings. Do not install a second folder called FWLT.
 
 ## Install once
 
 1. Close WoW. Extract the ZIP (Windows: right-click → Extract All).
-2. Open `ForeverCircle/START-HERE.html` for the Windows/Mac guide, optional local file checker and six feature walkthroughs.
+2. Open `ForeverCircle/START-HERE.html` for the Windows/Mac guide, optional local file checker and seven feature walkthroughs.
 3. In your launcher, select the correct client and open its actual install folder. Copy the whole `ForeverCircle` folder into `Interface/AddOns`.
 4. Confirm `Interface/AddOns/ForeverCircle/ForeverCircle.toc` exists, without an extra nested folder. The checker cannot determine whether you chose the actual game installation.
 5. Enable Friends Who Level Together Stay Together in the AddOns list, log in, and use `/fwlt setup` outside combat. First-run setup also opens automatically.
@@ -43,6 +43,7 @@ Use the named ZIP, not GitHub's automatic Source code archive.
 | Request a craft | Select a friend's recipe → Request from crafter; both enable order exchange |
 | Plan supplies | Select a recipe → Plan materials, then `/fwlt shopping`; Copy materials shares planned totals manually |
 | Coordinate a project, wishlist or activity | `/fwlt boards`; Directory and Boards sharing both need to be on |
+| Set up native guild chat after guild creation | `/fwlt discord` or Setup → Native guild chat setup |
 | Learn the controls | `/fwlt help` |
 | Report a problem | `/fwlt doctor`, plus what you clicked and the first error |
 
@@ -58,10 +59,18 @@ Manual fallback: `/fwlt export current`, then `/fwlt import`. Only own-character
 
 **Addon and Discord orders/activity boards are separate lists.** Create a request in one place and keep its confirmations there. There is no automatic Discord-to-addon import.
 
+## Optional native guild chat
+
+After your guild exists, link Battle.net and Discord accounts and have a guild leader/permitted officer link the intended whole-guild channel. `/fwlt discord` explains the steps and links to the official setup guide. Use `#wow-guild-chat` for human conversation, unlinked `#fwlt` for bot tools, and `#wow-lfg` for activities. Confirm one human message each way after launch. Native chat on Classic/Hardcore remains unverified.
+
+**Copy for guild chat** includes recipe/output identity and quantity for a craft, or title and time for your own current activity. Review the text, then copy and send it yourself. Private terms, price, materials, notes and participants are omitted. Copying creates no order, signup or delivery confirmation. Guild-chat text may appear in linked Discord; choose what you post accordingly.
+
+Native chat does not upload character observations. Keep using browser sync or manual character export for offline lookups. The addon does not connect accounts, detect link status or automatically send chat.
+
 ## If something goes wrong
 
 Check the same client, addon version, group and both players' sharing settings. Open your own profession before scanning recipes. For stale Discord data, save with `/reload` outside combat and check the sync page. If the addon disrupts play, disable it and reload; retain saved data for troubleshooting.
 
 The offline checker checks the TOC and Lua checksums locally and does not upload or change files. Select only the addon folder, never an account or WTF folder. It validates package files, not game compatibility.
 
-Automated validation: 201 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 21 runtime files verified by each packaged guide. Independent visual review covered 30 synthetic screen/form states and 150 screen-fitting cases. Nine character export fixtures byte-match 0.8.1. Browser previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need launch testing. The addon uses no required third-party addons or bundled game assets.
+Automated validation: 210 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 22 runtime files verified by each packaged guide. Eight updated synthetic preview states pass 40 screen-fitting checks; seven offline walkthroughs were exercised in the browser. Nine character export fixtures byte-match 0.8.2. Browser previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need launch testing. The addon uses no required third-party addons or bundled game assets.
