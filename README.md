@@ -2,15 +2,17 @@
 
 An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-**Current download: 0.8.1-alpha. Real-game compatibility is still being tested.** Choose the correct client ZIP; everyone testing together should use the same version.
+**Current download: 0.8.2-alpha. Real-game compatibility is still being tested.** Choose the correct client ZIP; everyone testing together should use the same version.
 
-- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/ForeverCircle-Forever.zip)
-- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/ForeverCircle-Classic-Hardcore.zip)
-- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.8.1-alpha)
+- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.2-alpha/ForeverCircle-Forever.zip)
+- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.2-alpha/ForeverCircle-Classic-Hardcore.zip)
+- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.8.2-alpha)
 
-[Quick-start infographic (PNG)](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/FWLT-Quick-Start.png)
+[Quick-start infographic (0.8.1 guide; commands still apply)](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/FWLT-Quick-Start.png)
 
 Use the named ZIP, not GitHub's automatic Source code archive.
+
+**New in 0.8.2:** clearer selected rows and tabs, labelled search boxes, calmer grouped forms and windows that refit when the UI scale changes.
 
 **New name, familiar data:** `/fwlt` is the primary command. `/fc` and `/forevercircle` still work in game. Keep the `ForeverCircle` install folder and saved file; updating uses your existing characters, recipes, orders and settings. Do not install a second folder called FWLT.
 
@@ -62,4 +64,4 @@ Check the same client, addon version, group and both players' sharing settings. 
 
 The offline checker checks the TOC and Lua checksums locally and does not upload or change files. Select only the addon folder, never an account or WTF folder. It validates package files, not game compatibility.
 
-Automated validation: 194 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, six browser-tested walkthroughs, and an eight-client sharing simulation from 0.8. Nine character export fixtures remain byte-identical after the rename. Actual game APIs, rendering, persistence and delivery still need launch testing. The addon uses no required third-party addons or bundled game assets.
+Automated validation: 201 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 21 runtime files verified by each packaged guide. Independent visual review covered 30 synthetic screen/form states and 150 screen-fitting cases. Nine character export fixtures byte-match 0.8.1. Browser previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need launch testing. The addon uses no required third-party addons or bundled game assets.
