@@ -1,56 +1,59 @@
-# Forever Circle downloads
+# Forever Circle — play together
 
-Forever Circle helps a group of friends find crafters, coordinate professions, request crafted items, plan materials, and organize shared projects, wishlists and activities.
+An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-## Download
+**Current download: 0.8.0-alpha. Real-game compatibility is still being tested.** Choose the correct client ZIP; everyone testing together should use the same version.
 
-**0.5.0-alpha is an early test build. Automated checks pass; real game compatibility has not yet been verified.** Everyone testing together should install the same version.
+- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.0-alpha/ForeverCircle-Forever.zip)
+- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.0-alpha/ForeverCircle-Classic-Hardcore.zip)
+- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.8.0-alpha)
 
-- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.5.0-alpha/ForeverCircle-Forever.zip) — interface 16001, the build for Forever launch night.
-- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.5.0-alpha/ForeverCircle-Classic-Hardcore.zip) — interface 11509; separate saved data. Hardcore testing is deferred.
-- [All releases and notes](https://github.com/lukevrobbins/forever-circle-downloads/releases)
+Use the named ZIP, not GitHub's automatic Source code archive.
 
-Download the named addon ZIP, not GitHub's automatic **Source code** archive. This repository hosts downloads and installation notes. Each addon ZIP includes readable Lua source; no companion program, website account or Discord bot is required.
+## Install once
 
-## Install
+1. Close WoW. Extract the ZIP (Windows: right-click → Extract All).
+2. Open `ForeverCircle/START-HERE.html` for the Windows/Mac guide, optional local file checker and six feature walkthroughs.
+3. In your launcher, select the correct client and open its actual install folder. Copy the whole `ForeverCircle` folder into `Interface/AddOns`.
+4. Confirm `Interface/AddOns/ForeverCircle/ForeverCircle.toc` exists, without an extra nested folder. The checker cannot determine whether you chose the actual game installation.
+5. Enable Forever Circle in the AddOns list, log in, and use `/fc setup` outside combat. First-run setup also opens automatically.
 
-1. Close the game. If updating, back up the existing ForeverCircle addon folder and its SavedVariables first.
-2. In the launcher, select the actual game version and open its installation folder. Find `Interface/AddOns`. Classic Hardcore uses the `_classic_era_` installation; use the actual Forever launch installation for Forever.
-3. Extract the matching ZIP. The final path should be `Interface/AddOns/ForeverCircle/ForeverCircle.toc`, with no extra ZIP-name folder around it.
-4. Launch the game, enable **Forever Circle**, log in, then run `/fc probe` and `/fc` outside combat.
-5. Open each owned profession window to collect learned recipes. On Classic, expand the character Skills headers if profession data is unavailable. Recipe knowledge is a dated observation, not a promise the item can be crafted immediately.
+**Updating:** close the game and back up the old addon and its SavedVariables first. Replace the addon files while retaining saved data. A rollback needs the matching old addon and old data backup. Do not copy saved data between Forever and Classic.
 
-Keep the folder named `ForeverCircle`. Retain SavedVariables when updating and do not copy them between game versions.
+## First five minutes with a friend
 
-## Try it with a friend
+- Join the same party. Each player chooses Party in Setup and turns Directory sharing on. Choose Guild later when the guild exists.
+- Turn on Location + quests if you want to share whereabouts, quest objectives and waiting notes. Click Sync on both clients.
+- Open `/fc home` for quest buddies, orders to review and feature shortcuts. `/fc help` explains each feature; `/fc` opens the directory.
+- Open your owned profession windows to collect learned recipes. Search Recipes; no result means not observed, not necessarily unknown.
+- Select one of your quests and use Save / edit waiting to leave an explicit plan for friends. Dates show when information was observed; nothing promises someone is online.
 
-Join the same normal party. Each player runs:
+## Things you can do
 
-```text
-/fc share party
-/fc boards on
-/fc orders on
-/fc sync
-```
+| Goal | Where to start |
+|---|---|
+| Find a crafter, race/class/level or profession | `/fc` or `/fc find` |
+| See last-known locations and shared quests | `/fc whereabouts`, `/fc quests`, or Home → Quest buddies |
+| Request a craft | Select a friend's recipe → Request from crafter; both enable order exchange |
+| Plan supplies | Select a recipe → Plan materials, then `/fc shopping`; Copy materials shares planned totals manually |
+| Coordinate a project, wishlist or activity | `/fc boards`; Directory and Boards sharing both need to be on |
+| Learn the controls | `/fc help` |
+| Report a problem | `/fc doctor`, plus what you clicked and the first error |
 
-Check that you can find each other's character and scanned recipes. Large recipe books can take several minutes. Use `/fc boards` for projects, wishlists and activities, `/fc shopping` for local material plans and `/fc orders` for requests and jobs.
+Materials, payment and delivery confirmations stay manual. Message acknowledgment is not acceptance or delivery. Changing audience turns all exchanges off. Previously shared copies can remain with recipients.
 
-Once you are in the same guild, choose `/fc share guild` and re-enable boards and orders. Changing party membership selects a new group scope; old posts and orders do not move into it automatically.
+## Optional Discord access
 
-Order materials, payment and delivery are manual reports. The sender records what was sent and the recipient separately confirms receipt. The addon does not craft, mail, trade or transfer money. Use clearly labeled test orders before relying on it for real requests.
+In the group's Discord, use `/circle help` for walkthroughs, My characters, quest buddies and sync controls. Automatic sync uses Chrome or Edge, a read-only selected addon SavedVariables file, explicit own-character selection and a revocable connection. Keep the tab active; WoW must save at reload/logout before new observations reach disk. The native Windows picker and real-game save workflow remain acceptance checks.
 
-Sharing starts off. To stop all exchanges:
+Manual fallback: `/fc export current`, then `/circle import`. Only own-character observations are exported; other players' caches, inventory, private orders and boards are excluded.
 
-```text
-/fc share off
-/fc boards off
-/fc orders off
-```
+**Addon and Discord orders/activity boards are separate lists.** Create a request in one place and keep its confirmations there. There is no automatic Discord-to-addon import.
 
-Previously shared copies remain with recipients. The addon does not upload anything to a website or Discord. `/fc export` copies your own character/recipe observations for an optional future importer; it excludes private orders and board posts.
+## If something goes wrong
 
-## Report a problem
+Check the same client, addon version, group and both players' sharing settings. Open your own profession before scanning recipes. For stale Discord data, save with `/reload` outside combat and check the sync page. If the addon disrupts play, disable it and reload; retain saved data for troubleshooting.
 
-Capture the first error, what you clicked, the addon version and `/fc probe` output. Send it to Luke through the group's existing channel. Do not attach account folders, tokens or full SavedVariables to a public issue. If errors interfere with play, disable Forever Circle in AddOns and reload; keep its saved data for diagnosis.
+The offline checker checks the TOC and Lua checksums locally and does not upload or change files. Select only the addon folder, never an account or WTF folder. It validates package files, not game compatibility.
 
-This test build has no automatic updater. Return to the releases page for updates and install the matching ZIP with the client closed.
+Automated validation: 193 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, six browser-tested walkthroughs, and an eight-client sharing simulation. Actual game APIs, rendering, persistence and delivery still need launch testing. The addon uses no required third-party addons or bundled game assets.
