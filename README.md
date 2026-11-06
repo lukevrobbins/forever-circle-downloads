@@ -2,7 +2,11 @@
 
 An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-**Current download: 0.9.0-alpha. Real-game compatibility is still being tested.** Choose the correct client ZIP; everyone testing together should use the same version.
+**Current version: 0.9.0-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
+
+**WoW Forever: install from CurseForge (easiest).** FWLT is on CurseForge as [Friends Who Level Together Stay Together](https://www.curseforge.com/wow/addons/friends-who-level-together-stay-together). In the CurseForge app, choose World of Warcraft and your Forever installation, search for **Friends Who Level Together Stay Together** and install it. The app then offers each new version as an update. [Already installed from a ZIP?](#switching-from-a-zip-to-curseforge)
+
+**Classic Era / Hardcore, or no CurseForge app:** use the ZIP for your client.
 
 - [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.0-alpha/ForeverCircle-Forever.zip)
 - [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.0-alpha/ForeverCircle-Classic-Hardcore.zip)
@@ -12,13 +16,11 @@ An experimental addon for our friend group: find crafters, share dated character
 
 Use the named ZIP, not GitHub's automatic Source code archive.
 
-**Coming to CurseForge:** FWLT has a CurseForge project that is waiting for CurseForge's approval. Once it's approved, you can install and update it from the CurseForge app by searching **Friends Who Level Together Stay Together**. Until then, use the ZIPs above.
-
 **New in 0.9.0:** every window is redesigned around one menu on the left (Home, Directory, Together, Orders, Plans and Setup). Only one main page shows at a time, and forms open on top, so windows no longer pile up on each other. Setup is a guided page with an explicit Party / Guild choice, and a "What I share" card shows your sharing at a glance. 0.8.3's **Copy for guild chat** and `/fwlt discord` guide are kept in the new layout. Your saved data, sync and commands are unchanged.
 
 **New name, familiar data:** `/fwlt` is the primary command. `/fc` and `/forevercircle` still work in game. Keep the `ForeverCircle` install folder and saved file; updating uses your existing characters, recipes, orders and settings. Do not install a second folder called FWLT.
 
-## Install once
+## Install from a ZIP
 
 1. Close WoW. Extract the ZIP (Windows: right-click → Extract All).
 2. Open `ForeverCircle/START-HERE.html` for the Windows/Mac guide, optional local file checker and seven feature walkthroughs.
@@ -26,7 +28,17 @@ Use the named ZIP, not GitHub's automatic Source code archive.
 4. Confirm `Interface/AddOns/ForeverCircle/ForeverCircle.toc` exists, without an extra nested folder. The checker cannot determine whether you chose the actual game installation.
 5. Enable Friends Who Level Together Stay Together in the AddOns list, log in, and use `/fwlt setup` outside combat. First-run setup also opens automatically.
 
-**Updating:** close the game and back up the old addon and its SavedVariables first. Replace the addon files while retaining saved data. A rollback needs the matching old addon and old data backup. Do not copy saved data between Forever and Classic.
+**Updating a ZIP install:** close the game and back up the old addon and its SavedVariables first. Replace the addon files while retaining saved data. A rollback needs the matching old addon and old data backup. Do not copy saved data between Forever and Classic. CurseForge installs update from the app instead.
+
+## Switching from a ZIP to CurseForge
+
+Your characters, recipes, orders and settings are saved in the game's `WTF` folder, not in the addon folder, so switching keeps them. CurseForge installs the same `ForeverCircle` folder.
+
+1. Close WoW.
+2. Back up `WTF/Account/<your account>/SavedVariables/ForeverCircle.lua` (and `ForeverCircle.lua.bak` if present).
+3. Move the old `Interface/AddOns/ForeverCircle` folder out of `AddOns`, for example to your desktop. That keeps a copy of the old version and lets the app install cleanly.
+4. Install FWLT from the CurseForge app as above.
+5. Start WoW, check that Friends Who Level Together Stay Together is enabled in the AddOns list, and run `/fwlt doctor` to confirm the version.
 
 ## First five minutes with a friend
 
