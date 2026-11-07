@@ -2,21 +2,23 @@
 
 An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-**Current version: 0.9.7-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
+**Current version: 0.9.8-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
 
 **WoW Forever: install from CurseForge (easiest).** FWLT is on CurseForge as [Friends Who Level Together Stay Together](https://www.curseforge.com/wow/addons/friends-who-level-together-stay-together). In the CurseForge app, choose World of Warcraft and your Forever installation, search for **Friends Who Level Together Stay Together** and install it. The app then offers each new version as an update. [Already installed from a ZIP?](#switching-from-a-zip-to-curseforge)
 
 **Classic Era / Hardcore, or no CurseForge app:** use the ZIP for your client.
 
-- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.7-alpha/ForeverCircle-Forever.zip)
-- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.7-alpha/ForeverCircle-Classic-Hardcore.zip)
-- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.9.7-alpha)
+- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.8-alpha/ForeverCircle-Forever.zip)
+- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.8-alpha/ForeverCircle-Classic-Hardcore.zip)
+- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.9.8-alpha)
 
 [Quick-start infographic (0.8.1 guide; commands still apply)](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/FWLT-Quick-Start.png)
 
 Use the named ZIP, not GitHub's automatic Source code archive.
 
-**New in 0.9.7: see what needs you.** Small amber counts on the left menu show orders waiting on you (Orders), friends waiting for you on a quest (Home) and new pledges or signups on your posts (Plans); hover one to see what it means. The minimap button shows the total. Order rows say where each order stands ("Materials 6/16", "Delivered 2/4"). Together → Quests gives each person a heading with progress bars for their objectives, and item names now fill in instead of showing "Item 2589".
+**New in 0.9.8: what needs you comes first.** Home opens on a **What needs you** list: orders where it's your move, friends waiting for you on a shared quest and new replies on your posts, each with a button that opens it. New replies stay counted until you click their post (just opening Plans no longer clears them), and each post shows "2 new". Crafting requests keep what you typed when you close them, switch pages or `/reload`, with **Keep draft** and **Discard**; Setup keeps unsaved nickname and profession-goal edits until you save or discard them. On small screens or with a large UI scale, Home, Directory, Together, Plans and Orders show the list first, then the details, with **Back to results**. Quest buddies shows your current group unless you choose **Include earlier groups**. Replies you got before updating may show as new once.
+
+**From 0.9.7: see what needs you.** Small amber counts on the left menu show orders waiting on you (Orders), friends waiting for you on a quest (Home) and new pledges or signups on your posts (Plans); hover one to see what it means. The minimap button shows the total. Order rows say where each order stands ("Materials 6/16", "Delivered 2/4"). Together → Quests gives each person a heading with progress bars for their objectives, and item names now fill in instead of showing "Item 2589".
 
 **From 0.9.6: recipe gift hints** (thanks, Nick). Hover a recipe item in your bags, at a vendor or in an FWLT window, and a small FWLT bubble under the tooltip says whether someone could use it: **Gift this!** with the friends who may need it, **Keep this!** when only your alts may, or **No known need · 2 not scanned** when some characters haven't shared a full scan. "Looks like nobody needs this" appears only when everyone with that profession was checked. It's worked out on your computer from shared scans and sends nothing; `/fwlt gifts off` hides it.
 
@@ -83,7 +85,7 @@ Your characters, recipes, orders and settings are saved in the game's `WTF` fold
 | Coordinate a project, wishlist or activity | `/fwlt plans`; Directory and Plans sharing both need to be on |
 | Set up native guild chat after guild creation | `/fwlt discord` or Setup → Guild chat in Discord |
 | Check whether a friend needs a recipe | Hover the recipe item; `/fwlt gifts off` hides the hint |
-| See what needs you | The amber counts on the left menu and minimap button; hover for details |
+| See what needs you | Home's What needs you list, plus the amber counts on the left menu and minimap button |
 | Learn the controls | `/fwlt help` |
 | Report a problem | `/fwlt doctor`, plus what you clicked and the first error |
 
@@ -113,4 +115,4 @@ Check the same client, addon version, group and both players' sharing settings. 
 
 The offline checker checks the TOC and Lua checksums locally and does not upload or change files. Select only the addon folder, never an account or WTF folder. It validates package files, not game compatibility.
 
-Automated validation: 287 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 25 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client; 0.9.1 to 0.9.7 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets.
+Automated validation: 308 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 25 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client; 0.9.1 to 0.9.8 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets.
