@@ -2,21 +2,30 @@
 
 An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-**Current version: 0.9.5-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
+**Current version: 0.9.6-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
 
 **WoW Forever: install from CurseForge (easiest).** FWLT is on CurseForge as [Friends Who Level Together Stay Together](https://www.curseforge.com/wow/addons/friends-who-level-together-stay-together). In the CurseForge app, choose World of Warcraft and your Forever installation, search for **Friends Who Level Together Stay Together** and install it. The app then offers each new version as an update. [Already installed from a ZIP?](#switching-from-a-zip-to-curseforge)
 
 **Classic Era / Hardcore, or no CurseForge app:** use the ZIP for your client.
 
-- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.5-alpha/ForeverCircle-Forever.zip)
-- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.5-alpha/ForeverCircle-Classic-Hardcore.zip)
-- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.9.5-alpha)
+- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.6-alpha/ForeverCircle-Forever.zip)
+- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.6-alpha/ForeverCircle-Classic-Hardcore.zip)
+- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.9.6-alpha)
 
 [Quick-start infographic (0.8.1 guide; commands still apply)](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/FWLT-Quick-Start.png)
 
 Use the named ZIP, not GitHub's automatic Source code archive.
 
-**New since 0.9.2** (CurseForge had 0.9.3 and 0.9.4 in between):
+**New in 0.9.6: recipe gift hints** (thanks, Nick). Hover a recipe item in your bags, at a vendor or in an FWLT window, and a small FWLT bubble under the tooltip says whether someone could use it: **Gift this!** with the friends who may need it, **Keep this!** when only your alts may, or **No known need · 2 not scanned** when some characters haven't shared a full scan. "Looks like nobody needs this" appears only when everyone with that profession was checked. It's worked out on your computer from shared scans and sends nothing; `/fwlt gifts off` hides it.
+
+**Also in 0.9.6:**
+
+- **`/fwlt` opens Home**, like the minimap button. `/fwlt directory` opens the Directory and `/fwlt find` still searches recipes.
+- **Plan drafts are kept.** A new project, wishlist or activity keeps what you typed if you close it, switch pages or reload. **Keep draft** and **Discard** replace Cancel.
+- **Earlier party plans stay visible** as saved history when someone joins or leaves the party, and you can copy your own open post to the new party.
+- **Readable on small screens.** If a window doesn't fit, it keeps normal text size and scrolls, instead of shrinking.
+
+**From 0.9.3 to 0.9.5** (CurseForge had 0.9.3 and 0.9.4 in between):
 
 - **Smoother windows (0.9.3).** Lists scroll smoothly instead of jumping a page at a time. Escape closes the top FWLT window, Enter saves a form, and shift-clicking an item fills it in. The window remembers where you put it, and a minimap button opens FWLT.
 - **Plain wording (0.9.3).** No internal numbers on screen, one name for each sharing switch, plain order status and quieter chat. `/fwlt help` prints a short list; `/fwlt notices off` quiets sharing notices.
@@ -56,7 +65,7 @@ Your characters, recipes, orders and settings are saved in the game's `WTF` fold
 
 - Join the same party. Each player chooses Party in Setup and turns Directory sharing on. Choose Guild later when the guild exists.
 - Turn on Together sharing in Setup if you want to share whereabouts, quest objectives and waiting notes. Sharing then runs on its own: chat says when a friend's data arrives, and the bottom of the Directory shows progress.
-- Open `/fwlt home` for quest buddies, orders to review and feature shortcuts. `/fwlt help` explains each feature; `/fwlt` opens the directory. Use the menu on the left to move between pages.
+- Open `/fwlt home` for quest buddies, orders to review and feature shortcuts. `/fwlt` and `/fwlt home` open Home, `/fwlt directory` opens the directory, and `/fwlt help` explains each feature. Use the menu on the left to move between pages.
 - Open your owned profession windows to collect learned recipes. In Directory, select a friend and **Browse recipes**, or search Recipes; no result means not observed, not necessarily unknown.
 - In Together > Quests, select one of your quests and use **Save / edit waiting** to leave an explicit plan for friends. Dates show when information was observed; nothing promises someone is online.
 
@@ -64,13 +73,14 @@ Your characters, recipes, orders and settings are saved in the game's `WTF` fold
 
 | Goal | Where to start |
 |---|---|
-| Find a crafter, race/class/level or profession | `/fwlt` or `/fwlt find` |
+| Find a crafter, race/class/level or profession | `/fwlt directory` or `/fwlt find` |
 | See last-known locations and shared quests | `/fwlt whereabouts`, `/fwlt quests`, or Home → Quest buddies |
 | Request a craft | Directory → select a friend → Browse recipes → pick a recipe → Request from them; both turn on Orders sharing in Setup |
 | Send materials or deliver | At a mailbox or trade window, use the FWLT panel: Attach, press Send yourself, then Record. Or follow the order's "Your move" buttons |
 | Plan supplies | Select a recipe → Plan materials, then `/fwlt shopping`; Copy materials shares planned totals manually |
 | Coordinate a project, wishlist or activity | `/fwlt plans`; Directory and Plans sharing both need to be on |
 | Set up native guild chat after guild creation | `/fwlt discord` or Setup → Guild chat in Discord |
+| Check whether a friend needs a recipe | Hover the recipe item; `/fwlt gifts off` hides the hint |
 | Learn the controls | `/fwlt help` |
 | Report a problem | `/fwlt doctor`, plus what you clicked and the first error |
 
@@ -100,4 +110,4 @@ Check the same client, addon version, group and both players' sharing settings. 
 
 The offline checker checks the TOC and Lua checksums locally and does not upload or change files. Select only the addon folder, never an account or WTF folder. It validates package files, not game compatibility.
 
-Automated validation: 264 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 24 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client; 0.9.1 to 0.9.5 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets.
+Automated validation: 282 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 25 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client; 0.9.1 to 0.9.6 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets.
