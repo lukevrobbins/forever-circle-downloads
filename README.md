@@ -2,25 +2,33 @@
 
 An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-**Current version: 0.9.2-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
+**Current version: 0.9.5-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
 
 **WoW Forever: install from CurseForge (easiest).** FWLT is on CurseForge as [Friends Who Level Together Stay Together](https://www.curseforge.com/wow/addons/friends-who-level-together-stay-together). In the CurseForge app, choose World of Warcraft and your Forever installation, search for **Friends Who Level Together Stay Together** and install it. The app then offers each new version as an update. [Already installed from a ZIP?](#switching-from-a-zip-to-curseforge)
 
 **Classic Era / Hardcore, or no CurseForge app:** use the ZIP for your client.
 
-- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.2-alpha/ForeverCircle-Forever.zip)
-- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.2-alpha/ForeverCircle-Classic-Hardcore.zip)
-- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.9.2-alpha)
+- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.5-alpha/ForeverCircle-Forever.zip)
+- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.9.5-alpha/ForeverCircle-Classic-Hardcore.zip)
+- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.9.5-alpha)
 
 [Quick-start infographic (0.8.1 guide; commands still apply)](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/FWLT-Quick-Start.png)
 
 Use the named ZIP, not GitHub's automatic Source code archive.
 
-**New in 0.9.2:** each crafting order shows a step bar (Requested → Accepted → Materials → Crafting → Delivered → Paid → Done) and one-click buttons for your next move, such as **Confirm 4 received** or **I paid 2g**. At a mailbox or trade window, an FWLT panel can fill in what an order still needs: click **Attach**, press Send yourself, then **Record**. Whether the game lets addons move items into mail is still being tested; if it doesn't, the panel says so and you drag items in as before.
+**New since 0.9.2** (CurseForge had 0.9.3 and 0.9.4 in between):
 
-**From 0.9.1:** sharing keeps to the game's send limit, so it's faster and no longer shows "throttled". It also says what it's doing at the bottom of the Directory, under "What I share" and in chat ("Got Bea's Alchemy: 12 recipes."). In Directory, select a friend and **Browse recipes** to see what they can make. Recipes shows each recipe once with everyone who knows it, and **Request from** sends the request to the friend you pick. "Sync with group" is now **Refresh from group**; sharing runs on its own, so you only need it if something looks out of date. 0.9.0 and 0.9.1 can share data with each other.
+- **Smoother windows (0.9.3).** Lists scroll smoothly instead of jumping a page at a time. Escape closes the top FWLT window, Enter saves a form, and shift-clicking an item fills it in. The window remembers where you put it, and a minimap button opens FWLT.
+- **Plain wording (0.9.3).** No internal numbers on screen, one name for each sharing switch, plain order status and quieter chat. `/fwlt help` prints a short list; `/fwlt notices off` quiets sharing notices.
+- **Visual details (0.9.4).** Details show items with their icons and tooltips, and progress bars for order materials, plan goals, your shopping list and profession skill. Crafting requests list materials as rows you can edit. Orders details use the whole column.
+- **Settings in Setup (0.9.4).** The four sharing switches and your nickname and profession goals live in Setup; a badge in each window's header shows who you share with and whether sharing is working.
+- **Reviewed fixes (0.9.5).** After a reload the status says **Saved data only** until friends are heard from again. Quest buddies seen recently come first. Paused shopping plans no longer block new ones and can be deleted. Party orders keep working when someone joins or leaves the party; for that, both players need 0.9.5.
 
-**From 0.9.0:** every window is redesigned around one menu on the left (Home, Directory, Together, Orders, Plans and Setup). Only one main page shows at a time, and forms open on top, so windows no longer pile up on each other. Setup is a guided page with an explicit Party / Guild choice, and a "What I share" card shows your sharing at a glance. 0.8.3's **Copy for guild chat** and `/fwlt discord` guide are kept in the new layout. Your saved data, sync and commands are unchanged.
+**From 0.9.2:** each crafting order shows a step bar (Requested → Accepted → Materials → Crafting → Delivered → Paid → Done) and one-click buttons for your next move, such as **Confirm 4 received** or **I paid 2g**. At a mailbox or trade window, an FWLT panel can fill in what an order still needs: click **Attach**, press Send yourself, then **Record**. Whether the game lets addons move items into mail is still being tested; if it doesn't, the panel says so and you drag items in as before.
+
+**From 0.9.1:** sharing keeps to the game's send limit, so it's faster and no longer shows "throttled". It also says what it's doing at the bottom of the Directory, in the header badge and in chat ("Got Bea's Alchemy: 12 recipes."). In Directory, select a friend and **Browse recipes** to see what they can make. Recipes shows each recipe once with everyone who knows it, and **Request from** sends the request to the friend you pick. "Sync with group" is now **Refresh from group**; sharing runs on its own, so you only need it if something looks out of date. 0.9.0 and 0.9.1 can share data with each other.
+
+**From 0.9.0:** every window is redesigned around one menu on the left (Home, Directory, Together, Orders, Plans and Setup). Only one main page shows at a time, and forms open on top, so windows no longer pile up on each other. Setup is a guided page with an explicit Party / Guild choice, and a "What I share" card shows your sharing at a glance (since 0.9.4, a badge in the header). 0.8.3's **Copy for guild chat** and `/fwlt discord` guide are kept in the new layout. Your saved data, sync and commands are unchanged.
 
 **New name, familiar data:** `/fwlt` is the primary command. `/fc` and `/forevercircle` still work in game. Keep the `ForeverCircle` install folder and saved file; updating uses your existing characters, recipes, orders and settings. Do not install a second folder called FWLT.
 
@@ -47,7 +55,7 @@ Your characters, recipes, orders and settings are saved in the game's `WTF` fold
 ## First five minutes with a friend
 
 - Join the same party. Each player chooses Party in Setup and turns Directory sharing on. Choose Guild later when the guild exists.
-- Turn on Location + quests if you want to share whereabouts, quest objectives and waiting notes. Sharing then runs on its own: chat says when a friend's data arrives, and the bottom of the Directory shows progress.
+- Turn on Together sharing in Setup if you want to share whereabouts, quest objectives and waiting notes. Sharing then runs on its own: chat says when a friend's data arrives, and the bottom of the Directory shows progress.
 - Open `/fwlt home` for quest buddies, orders to review and feature shortcuts. `/fwlt help` explains each feature; `/fwlt` opens the directory. Use the menu on the left to move between pages.
 - Open your owned profession windows to collect learned recipes. In Directory, select a friend and **Browse recipes**, or search Recipes; no result means not observed, not necessarily unknown.
 - In Together > Quests, select one of your quests and use **Save / edit waiting** to leave an explicit plan for friends. Dates show when information was observed; nothing promises someone is online.
@@ -58,11 +66,11 @@ Your characters, recipes, orders and settings are saved in the game's `WTF` fold
 |---|---|
 | Find a crafter, race/class/level or profession | `/fwlt` or `/fwlt find` |
 | See last-known locations and shared quests | `/fwlt whereabouts`, `/fwlt quests`, or Home → Quest buddies |
-| Request a craft | Directory → select a friend → Browse recipes → pick a recipe → Request from them; both turn on Private orders |
+| Request a craft | Directory → select a friend → Browse recipes → pick a recipe → Request from them; both turn on Orders sharing in Setup |
 | Send materials or deliver | At a mailbox or trade window, use the FWLT panel: Attach, press Send yourself, then Record. Or follow the order's "Your move" buttons |
 | Plan supplies | Select a recipe → Plan materials, then `/fwlt shopping`; Copy materials shares planned totals manually |
-| Coordinate a project, wishlist or activity | `/fwlt boards`; Directory and Boards sharing both need to be on |
-| Set up native guild chat after guild creation | `/fwlt discord` or Setup → Native guild chat setup |
+| Coordinate a project, wishlist or activity | `/fwlt plans`; Directory and Plans sharing both need to be on |
+| Set up native guild chat after guild creation | `/fwlt discord` or Setup → Guild chat in Discord |
 | Learn the controls | `/fwlt help` |
 | Report a problem | `/fwlt doctor`, plus what you clicked and the first error |
 
@@ -92,4 +100,4 @@ Check the same client, addon version, group and both players' sharing settings. 
 
 The offline checker checks the TOC and Lua checksums locally and does not upload or change files. Select only the addon folder, never an account or WTF folder. It validates package files, not game compatibility.
 
-Automated validation: 233 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 23 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client, and 0.9.1 and 0.9.2 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets.
+Automated validation: 264 Lua 5.1 checks against source and each extracted client ZIP, 16 install-check cases, and all 24 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client; 0.9.1 to 0.9.5 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets.
