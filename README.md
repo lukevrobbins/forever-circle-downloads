@@ -2,21 +2,23 @@
 
 An experimental addon for our friend group: find crafters, share dated character information, request crafts, and save quests to do together.
 
-**Current version: 0.10.0-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
+**Current version: 0.11.0-alpha. Real-game compatibility is still being tested.** Everyone testing together should use the same version.
 
 **WoW Forever: install from CurseForge (easiest).** FWLT is on CurseForge as [Friends Who Level Together Stay Together](https://www.curseforge.com/wow/addons/friends-who-level-together-stay-together). In the CurseForge app, choose World of Warcraft and your Forever installation, search for **Friends Who Level Together Stay Together** and install it. The app then offers each new version as an update. [Already installed from a ZIP?](#switching-from-a-zip-to-curseforge)
 
 **Classic Era / Hardcore, or no CurseForge app:** use the ZIP for your client.
 
-- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.10.0-alpha/ForeverCircle-Forever.zip)
-- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.10.0-alpha/ForeverCircle-Classic-Hardcore.zip)
-- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.10.0-alpha)
+- [Download for WoW Forever](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.11.0-alpha/ForeverCircle-Forever.zip)
+- [Download for Classic Era / Hardcore](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.11.0-alpha/ForeverCircle-Classic-Hardcore.zip)
+- [Release notes and checksums](https://github.com/lukevrobbins/forever-circle-downloads/releases/tag/v0.11.0-alpha)
 
 [Quick-start infographic (0.8.1 guide; commands still apply)](https://github.com/lukevrobbins/forever-circle-downloads/releases/download/v0.8.1-alpha/FWLT-Quick-Start.png)
 
 Use the named ZIP, not GitHub's automatic Source code archive.
 
-**New in 0.10.0: auction prices, Field Stats and preferences.** On Forever, FWLT remembers the auction prices of listings you open at an auctioneer, and **Look up materials** in Shopping or Plan materials checks prices one item at a time. Shopping then estimates what your missing materials cost, and Plan materials compares them with the crafted item's lowest listing. Prices stay on your computer for 30 minutes. `/fwlt stats` opens **Field Stats**, a notebook of what you loot, craft and earn from quests; link a quest item to its objective to see how often it drops for you, and share summaries with your group only if you turn that on. **Setup → Preferences** (`/fwlt settings`) turns the party sound, interface sounds, hints, chat notices, the minimap button and the mail and trade helper on or off. Plans show your pledge or signup and progress on each row, a chat line tells you when it's your move, Orders lists your moves first, results appear as a notice on the page, and lists show item, profession and class icons.
+**New in 0.11.0: Your Story.** A private notebook of your character's adventure fills itself in as you play. Open **Your Story** from the left menu, **Discover your story** on Home, or `/fwlt story`. **Discover** shows this login's chapter, a recent standout and your personal records. **Moments** lists first finds and crafts, quest turn-ins, new levels, deaths and returns, and "Finally!" when a drop you were tracking in Field Stats turns up after a long dry streak. **Passport** stamps each new map, **Company** remembers who you grouped with, and **Keepsakes** keeps up to 30 favorite moments. It records from now on, not your past, and nothing in it is shared. Turn it off on the page or in Setup → Preferences.
+
+**From 0.10.0: auction prices, Field Stats and preferences.** On Forever, FWLT remembers the auction prices of listings you open at an auctioneer, and **Look up materials** in Shopping or Plan materials checks prices one item at a time. Shopping then estimates what your missing materials cost, and Plan materials compares them with the crafted item's lowest listing. Prices stay on your computer for 30 minutes. `/fwlt stats` opens **Field Stats**, a notebook of what you loot, craft and earn from quests; link a quest item to its objective to see how often it drops for you, and share summaries with your group only if you turn that on. **Setup → Preferences** (`/fwlt settings`) turns the party sound, interface sounds, hints, chat notices, the minimap button and the mail and trade helper on or off. Plans show your pledge or signup and progress on each row, a chat line tells you when it's your move, Orders lists your moves first, results appear as a notice on the page, and lists show item, profession and class icons.
 
 **From 0.9.9: a party join sound, easier browsing and item rows.** A sound plays when a friend joins your party or you join theirs (Nick's John Cena clip): `/fwlt cena off` turns it off, `/fwlt cena on` turns it back on and `/fwlt cena test` plays it. **Fully close and restart WoW after updating** so the new sound file loads. Plan forms list items as rows with their own quantities: Shift-click or paste an item, set the quantity, then **Add item**. Recording what you received starts with a searchable list of contributors, and quest waiting notes you haven't saved stay on your computer as drafts. In the search box of any list, Up and Down move through the results and Enter opens one; hovering a row shows its full text. Recipes shows **Reset filters** when a filter is on, and Plans and Shopping find plans by material name or item ID. Setup is split into sections, the crafting request shows the whole form at normal size, Directory's profession and crafter choices are searchable lists, and the mail and trade helper pages through all your orders.
 
@@ -94,6 +96,7 @@ Your characters, recipes, orders and settings are saved in the game's `WTF` fold
 | Choose sounds, hints, chat notices and helpers | `/fwlt settings` (Setup → Preferences) |
 | Estimate material costs (Forever) | At an auctioneer: Shopping or Plan materials → Look up materials |
 | Keep a loot notebook or study a quest drop | `/fwlt stats` |
+| See your character's story, firsts and keepsakes | `/fwlt story` |
 | Learn the controls | `/fwlt help` |
 | Report a problem | `/fwlt doctor`, plus what you clicked and the first error |
 
@@ -123,4 +126,4 @@ Check the same client, addon version, group and both players' sharing settings. 
 
 The offline checker checks the TOC and Lua checksums locally and does not upload or change files. Select only the addon folder, never an account or WTF folder. It validates package files, not game compatibility.
 
-Automated validation: 483 Lua 5.1 checks against source and each extracted client ZIP, 20 install-check cases, and all 33 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client; 0.9.1 to 0.10.0 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets; its one sound file is the party join clip.
+Automated validation: 508 Lua 5.1 checks against source and each extracted client ZIP, 20 install-check cases, and all 35 runtime files verified by each packaged guide. Previews approximate WoW fonts and controls. Actual game APIs, rendering, persistence and delivery still need testing; 0.9.0 loaded in a Forever client; 0.9.1 to 0.11.0 haven't been tested in game yet. The addon uses no required third-party addons or bundled game assets; its one sound file is the party join clip.
